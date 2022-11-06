@@ -16,23 +16,23 @@ describe("TodoListOfNhat", function () {
 
       return {todoListContract, addressOwner}
     }
-it("First deploy contract", async () => {
-  const { addressOwner, todoListContract } = await loadFixture(deployTodoList)
-  const a = await todoListContract.counterOfAddress(addressOwner);
-  console.log("a", a);
+// it("First deploy contract", async () => {
+//   const { addressOwner, todoListContract } = await loadFixture(deployTodoList)
+//   const a = await todoListContract.counterOfAddress(addressOwner);
+//   console.log("a", a);
 
-  await todoListContract.addTodoItem("Description 1");
-  const b = await todoListContract.counterOfAddress(addressOwner);
-  console.log("b", b);
+//   await todoListContract.addTodoItem("Description 1");
+//   const b = await todoListContract.counterOfAddress(addressOwner);
+//   console.log("b", b);
 
-  await todoListContract.addTodoItem("Description 2");
-  const c = await todoListContract.counterOfAddress(addressOwner);
+//   await todoListContract.addTodoItem("Description 2");
+//   const c = await todoListContract.counterOfAddress(addressOwner);
 
-  const dCompare = await todoListContract._listTodoOfAddress(addressOwner)[counter];
-  console.log("c", c.toNumber());
+//   const dCompare = await todoListContract._listTodoOfAddress(addressOwner)[counter];
+//   // console.log("c", c.toNumber());
 
-  // expect(c).to.equal(d)
-})
+//   // expect(c).to.equal(d)
+// })
 
 
 })

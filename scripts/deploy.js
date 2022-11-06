@@ -5,16 +5,16 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
+const env = require("dotenv")
 
 async function main() {
+  const Todo = await hre.ethers.getContractFactory("TodoListOfNhat");
+  const Contract = await Todo.deploy();
 
-  const Lock = await hre.ethers.getContractFactory("TodoListOfNhat");
-  const lock = await Lock.deploy();
-
-  await lock.deployed();
+  await Contract.deployed();
 
   console.log(
-    `Lock with 1 ETH and unlock timestamp  deployed to ${lock.address}`
+    `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
   );
 }
 
