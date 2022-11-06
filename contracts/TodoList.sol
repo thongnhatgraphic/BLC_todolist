@@ -40,7 +40,7 @@ contract TodoListOfNhat {
         require(_listTodoOfAddress[msg.sender][_index].owner == msg.sender, "You are not Owner this todolist");
         // require(_listTodoOfAddress[msg.sender][_index] == "", "Item has been delete");
 
-        ToDo storage itemUpdate = _listTodoOfAddress[msg.sender][_index-1];
+        ToDo storage itemUpdate = _listTodoOfAddress[msg.sender][_index];
 
         itemUpdate._desription = des;
         itemUpdate.status = status;
