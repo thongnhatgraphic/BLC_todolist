@@ -30,7 +30,7 @@ contract TodoListOfNhat {
         require(_index > 0, "Can not found index");
         require(_listTodoOfAddress[msg.sender].length > 0, "Can not delete when not todo avalable");
         require(_listTodoOfAddress[msg.sender][_index].owner == msg.sender, "You are not Owner this todolist");
-        uint256 indexCorrect = _index -1;
+        uint256 indexCorrect = _index;
         delete _listTodoOfAddress[msg.sender][indexCorrect];
         emit RemoveTodoItem(_listTodoOfAddress[msg.sender][indexCorrect]);
     }
