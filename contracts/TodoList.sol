@@ -13,7 +13,6 @@ contract TodoListOfNhat {
 
     mapping( address => ToDo[]) public _listTodoOfAddress;
 
-    mapping(uint256 => uint256) public idOfCounter;
 
     event AddTodoItem (ToDo _todo);
     event RemoveTodoItem(ToDo _todo);
@@ -27,7 +26,7 @@ contract TodoListOfNhat {
     }
 
     function removeTodoItem( uint256 _index) external {
-        require(_index > 0, "Can not found index");
+        require(_index < _listTodoOfAddress[msg.sender].length, "Can not delete when not todo avalable");
         require(_listTodoOfAddress[msg.sender].length > 0, "Can not delete when not todo avalable");
         require(_listTodoOfAddress[msg.sender][_index].owner == msg.sender, "You are not Owner this todolist");
         uint256 indexCorrect = _index;

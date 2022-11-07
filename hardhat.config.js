@@ -4,7 +4,7 @@ const PRIVATE_KEY_BSC="db3b5f5feb316f1f7c130b50efabad145de965a80cdc4027dc54ce202
 const ETHERSCAN_API_KEY="G78B5B1WXVVQW2P2TREQFQ8UE148W8MVV1"
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.17",
   networks: {
     bscchain: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
