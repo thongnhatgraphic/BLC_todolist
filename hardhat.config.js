@@ -2,6 +2,7 @@ require("@nomicfoundation/hardhat-toolbox");
 const PRIVATE_KEY_BSC="db3b5f5feb316f1f7c130b50efabad145de965a80cdc4027dc54ce20217355f9"
 
 const ETHERSCAN_API_KEY="G78B5B1WXVVQW2P2TREQFQ8UE148W8MVV1"
+const BSC_API_KEY="RBW69DMFARCH9RV6VH4C8INREW95FZB4G8"
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.17",
@@ -16,7 +17,7 @@ module.exports = {
     }
   },
   etherscan: {
-    apiKey: "T1STD46UKGQPGIM1SRRW54SXDC1XZDUUSG",
+    apiKey: BSC_API_KEY,
   },
   solidity: {
     version: "0.8.4",

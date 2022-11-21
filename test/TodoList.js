@@ -65,7 +65,7 @@ describe("TodoListOfNhat", function () {
       })
 
       it("Deploy contract- edit 1 item", async () => {
-
+        
       })
 
     })
