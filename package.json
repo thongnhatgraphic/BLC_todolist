@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-contracts-market": "sol-merger \"./contracts/Marketplace.sol\" ./build"
+    "build-contracts-market": "sol-merger \"./contracts/Marketplace.sol\" ./build",
+    "build-contracts-erc721": "sol-merger \"./contracts/NftErc721.sol\" ./build"
   },
   "author": "NhatDepTrai",
   "license": "ISC",

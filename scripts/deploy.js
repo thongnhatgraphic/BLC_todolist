@@ -17,14 +17,23 @@ async function main() {
   //   `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
   // );
 
-  const Market = await hre.ethers.getContractFactory("Marketplace");
-  const Contract = await Todo.deploy();
+  const NFT721 = await hre.ethers.getContractFactory("NftErc721");
+  const Contract = await NFT721.deploy();
 
   await Contract.deployed();
 
   console.log(
     `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
   );
+
+  // const Market = await hre.ethers.getContractFactory("Marketplace");
+  // const Contract = await Todo.deploy();
+
+  // await Contract.deployed();
+
+  // console.log(
+  //   `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
+  // );
 }
 
 // We recommend this pattern to be able to use async/await everywhere
