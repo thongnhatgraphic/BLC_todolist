@@ -8,7 +8,16 @@ const hre = require("hardhat");
 const env = require("dotenv")
 
 async function main() {
-  const Todo = await hre.ethers.getContractFactory("TodoListOfNhat");
+  // const Todo = await hre.ethers.getContractFactory("TodoListOfNhat");
+  // const Contract = await Todo.deploy();
+
+  // await Contract.deployed();
+
+  // console.log(
+  //   `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
+  // );
+
+  const Market = await hre.ethers.getContractFactory("Marketplace");
   const Contract = await Todo.deploy();
 
   await Contract.deployed();

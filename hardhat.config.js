@@ -1,4 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("dotenv");
+
 const PRIVATE_KEY_BSC="db3b5f5feb316f1f7c130b50efabad145de965a80cdc4027dc54ce20217355f9"
 
 const ETHERSCAN_API_KEY="G78B5B1WXVVQW2P2TREQFQ8UE148W8MVV1"
