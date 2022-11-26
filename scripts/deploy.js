@@ -17,13 +17,22 @@ async function main() {
   //   `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
   // );
 
-  const NFT721 = await hre.ethers.getContractFactory("NftErc721");
-  const Contract = await NFT721.deploy();
+  // const NFT721 = await hre.ethers.getContractFactory("NftErc721");
+  // const Contract = await NFT721.deploy();
+
+  // await Contract.deployed();
+
+  // console.log(
+  //   `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
+  // );
+
+  const Erc20 = await hre.ethers.getContractFactory("Erc20");
+  const Contract = await Erc20.deploy();
 
   await Contract.deployed();
 
   console.log(
-    `Lock with 1 ETH and unlock timestamp  deployed to ${Contract.address}`
+    ` ERC20 deployed to ${Contract.address}`
   );
 
   // const Market = await hre.ethers.getContractFactory("Marketplace");

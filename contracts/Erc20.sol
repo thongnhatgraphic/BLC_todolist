@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 
 contract Erc20 is ERC20, Ownable {
-    constructor() ERC20("TokenErc20", "NDT") {}
+    constructor() ERC20("EUROCOIN", "EUC") {}
 
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
