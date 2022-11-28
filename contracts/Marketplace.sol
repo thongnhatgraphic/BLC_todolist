@@ -64,6 +64,9 @@ contract Marketplace {
     }
     function buyItem (uint256 _tokenId) external {
         itemList storage ItemBuy = allItemsList[IdOfAllItemList[_tokenId]];
+
+        require(msg.sender != allItemsList[IdOfAllItemList[_tokenId]].seller, "You can't buy Asset yourself");
+        require(allItemsList[IdOfAllItemList[_tokenId]].status == Status.selling, "This Nft has been bought or cancel");
         ItemBuy.status = Status.sold;
         tokenErc20.transferFrom(msg.sender, ItemBuy.seller, ItemBuy.price);
         tokenErc721.transferFrom(address(this), msg.sender, _tokenId);
